@@ -1,0 +1,53 @@
+/* make.fun bounties: one small stylesheet, system fonts, no external assets. */
+body{margin:0 auto;max-width:960px;padding:0 16px 48px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#171717;background:#fff}
+header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 0;border-bottom:2px solid #171717}
+.brand{font-weight:800;font-size:18px;color:#171717;text-decoration:none}
+nav a{margin-left:14px;font-size:14px}
+a{color:#0b5cad}
+a:hover{text-decoration-thickness:2px}
+footer{margin-top:32px;padding-top:12px;border-top:1px solid #ddd;font-size:13px;color:#555}
+h1{font-size:26px;line-height:1.2;margin:20px 0 4px}
+h2{font-size:19px;margin:24px 0 8px}
+.sub{color:#444;margin:4px 0 12px}
+.note{color:#666;font-size:13px}
+.crumb{font-size:14px;margin:14px 0 0}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.controls input[type=search]{flex:1;min-width:180px;padding:8px 10px;font:inherit;border:1px solid #999;border-radius:6px}
+.controls select{padding:8px;font:inherit;border:1px solid #999;border-radius:6px;background:#fff}
+.board{list-style:none;padding:0;margin:0}
+.row{display:grid;grid-template-columns:1fr 6.5em 7em 7em 6.5em;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid #eee}
+.row .t{font-weight:600}
+.row.closed .t{color:#666}
+.pot{font-weight:700;text-align:right}
+.fee,.left,.n{font-size:14px;color:#333;text-align:right}
+.left{font-variant-numeric:tabular-nums}
+.empty{padding:24px 0;color:#555}
+.more{margin:14px 0}
+button{padding:8px 14px;font:inherit;border:1px solid #171717;border-radius:6px;background:#171717;color:#fff;cursor:pointer}
+button:disabled{opacity:.4;cursor:default}
+button.ghost,.btn.ghost{background:#fff;color:#171717}
+.btn{display:inline-block;padding:8px 14px;border:1px solid #171717;border-radius:6px;background:#171717;color:#fff;text-decoration:none;margin:0 8px 8px 0}
+.badges{margin:10px 0}
+.badge{display:inline-block;padding:2px 8px;margin:0 6px 6px 0;border:1px solid #999;border-radius:999px;font-size:13px}
+.badge.open{border-color:#0a7d2c;color:#0a7d2c;font-weight:700}
+.badge.closed{border-color:#999;color:#666}
+.facts{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:16px 0}
+.facts dt{font-weight:700}
+.facts dd{margin:0}
+table{border-collapse:collapse;width:100%;margin:8px 0}
+th,td{padding:7px 8px;border-bottom:1px solid #eee;text-align:left;vertical-align:top}
+th{font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:#444}
+.num,.rank{text-align:right;font-variant-numeric:tabular-nums}
+.rewards{max-width:420px}
+.description{white-space:pre-wrap;overflow-wrap:anywhere}
+.who{display:flex;gap:16px;align-items:flex-start;margin-top:8px}
+.avatar{border-radius:50%;object-fit:cover}
+@media (max-width:640px){
+  body{padding:0 12px 40px}
+  h1{font-size:22px}
+  .row{grid-template-columns:1fr 5.5em;grid-auto-rows:auto}
+  .row .fee,.row .left,.row .n{text-align:left}
+  .facts{grid-template-columns:1fr;gap:2px}
+  .facts dd{margin-bottom:8px}
+  table{display:block;overflow-x:auto}
+}
